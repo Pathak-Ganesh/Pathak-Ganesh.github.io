@@ -48,13 +48,25 @@
 
   <!-- HERO -->
   <header class="hero">
-    <div class="hero-text">
-      <h1 class="big-heading">Hi, I'm Ganesh.</h1>
-      <h2 class="medium-heading">Business Analyst & CRM Specialist.</h2>
-      <p class="hero-desc">
-        I design CRM workflows, author BRDs/FSDs, define user stories, and lead SIT/UAT execution.
-      </p>
-      <a class="primary-btn" href="resume.pdf" target="_blank">Download Resume</a>
+    <div class="hero-inner">
+
+      <!-- Left side text -->
+      <div class="hero-text">
+        <h1 class="big-heading">Hi, I'm Ganesh.</h1>
+        <h2 class="medium-heading">Business Analyst & CRM Specialist.</h2>
+
+        <p class="hero-desc">
+          I design CRM workflows, author BRDs/FSDs, define user stories, and lead SIT/UAT execution.
+        </p>
+
+        <a class="primary-btn" href="resume.pdf" target="_blank">Download Resume</a>
+      </div>
+
+      <!-- Portrait right side -->
+      <div class="hero-portrait">
+        <img src="photo.png" alt="Ganesh Mahendra Pathak" class="portrait">
+      </div>
+
     </div>
   </header>
 
@@ -180,29 +192,42 @@
 
   <!-- Accordion Script -->
   <script>
-    const accButtons = document.querySelectorAll(".acc-btn");
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons = document.querySelectorAll(".acc-btn");
 
-    accButtons.forEach(btn => {
-      btn.addEventListener("click", () => {
-
-        // close others
-        accButtons.forEach(other => {
-          if (other !== btn) {
-            other.classList.remove("active");
-            other.nextElementSibling.style.maxHeight = null;
+      function closeOthers(activeBtn) {
+        buttons.forEach(btn => {
+          if (btn !== activeBtn) {
+            btn.classList.remove("active");
+            btn.nextElementSibling.style.maxHeight = null;
           }
         });
+      }
 
-        // toggle selected
-        btn.classList.toggle("active");
-        const content = btn.nextElementSibling;
+      buttons.forEach((btn, index) => {
+        btn.addEventListener("click", () => {
+          const content = btn.nextElementSibling;
+          const open = btn.classList.contains("active");
 
-        if (btn.classList.contains("active")) {
-          content.style.maxHeight = content.scrollHeight + "px";
-        } else {
-          content.style.maxHeight = null;
-        }
+          closeOthers(btn);
+
+          if (!open) {
+            btn.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+          } else {
+            btn.classList.remove("active");
+            content.style.maxHeight = null;
+          }
+        });
       });
+
+      // OPEN FIRST ACCORDION BY DEFAULT
+      const first = buttons[0];
+      if (first) {
+        const content = first.nextElementSibling;
+        first.classList.add("active");
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
     });
   </script>
 
