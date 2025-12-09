@@ -1,222 +1,126 @@
-:root {
-  --dark-navy: #020c1b;
-  --navy: #0a192f;
-  --light-navy: #112240;
-  --slate: #8892b0;
-  --light-slate: #a8b2d1;
-  --white: #e6f1ff;
-  --green: #64ffda;
-  --radius: 6px;
-  --font: "Inter", sans-serif;
+:root{
+  --dark-navy:#020c1b;
+  --navy:#0a192f;
+  --light-navy:#112240;
+  --slate:#8892b0;
+  --light-slate:#a8b2d1;
+  --white:#e6f1ff;
+  --green:#64ffda;
+  --radius:6px;
+  --font:"Inter",sans-serif;
 }
 
 /* Base */
-body {
-  margin: 0;
-  background: var(--navy);
-  color: var(--slate);
-  font-family: var(--font);
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;padding:0}
+body{
+  margin:0;
+  background:var(--navy);
+  color:var(--slate);
+  font-family:var(--font);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
-/* Left rail */
-.left-rail {
-  position: fixed;
-  left: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
+/* LEFT RAIL (reduced offset) */
+.left-rail{
+  position:fixed;
+  left:18px;            /* tightened from 40px */
+  top:50%;
+  transform:translateY(-50%);
+  display:flex;
+  flex-direction:column;
+  gap:14px;             /* tightened gap */
+  z-index:60;
 }
-.rail-name {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  color: var(--green);
-  font-weight: 700;
-}
-.rail-links a,
-.rail-social a {
-  text-decoration: none;
-  color: var(--slate);
-  font-size: 14px;
-}
-.rail-links a:hover,
-.rail-social a:hover {
-  color: var(--green);
-}
+.rail-name{writing-mode:vertical-rl;transform:rotate(180deg);color:var(--green);font-weight:700;letter-spacing:3px}
+.rail-links a,.rail-social a{display:block;color:var(--slate);text-decoration:none;font-size:13px}
+.rail-links a:hover,.rail-social a:hover{color:var(--green)}
 
-/* Top nav */
-.top-nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  padding: 18px 40px;
-  backdrop-filter: blur(6px);
+/* TOP NAV (reduced padding) */
+.top-nav{
+  position:fixed;
+  width:100%;
+  top:0;
+  left:0;
+  padding:12px 28px;    /* tightened */
+  z-index:70;
+  background:linear-gradient(180deg,rgba(10,18,35,0.12),rgba(10,18,35,0));
+  backdrop-filter:blur(6px);
 }
-.nav-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.logo {
-  color: var(--green);
-  font-weight: 700;
-}
-.nav-links-main a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: var(--light-slate);
-}
-.nav-links-main a:hover {
-  color: var(--green);
-}
-.btn-nav {
-  padding: 6px 14px;
-  border: 1px solid var(--green);
-  border-radius: var(--radius);
-}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.logo{color:var(--green);font-weight:700;font-size:16px}
+.nav-links-main a{margin-left:14px;color:var(--light-slate);text-decoration:none;font-size:14px}
+.nav-links-main a:hover{color:var(--green)}
+.btn-nav{padding:6px 10px;border:1px solid var(--green);border-radius:var(--radius);color:var(--green)}
 
-/* HERO */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 160px 48px;
+/* HERO (reduced) */
+.hero{
+  min-height:calc(100vh - 40px);
+  display:flex;
+  align-items:center;
+  padding:100px 28px;   /* tightened from 160px */
+  max-width:1100px;
+  margin:0 auto;
 }
-.hero-inner {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.hero-text { flex: 1; }
+.hero-inner{display:flex;align-items:center;gap:24px;width:100%}
+.hero-text{flex:1}
+.big-heading{color:var(--white);font-size:44px;margin:0;line-height:1.02;font-weight:700}
+.medium-heading{color:var(--light-slate);font-size:20px;margin-top:8px;font-weight:500}
+.hero-desc{margin-top:12px;color:var(--slate);max-width:520px}
+.primary-btn{margin-top:14px;display:inline-block;padding:10px 18px;color:var(--green);border:1px solid var(--green);border-radius:var(--radius);text-decoration:none}
 
-.big-heading {
-  color: var(--white);
-  font-size: 56px;
-  font-weight: 700;
-}
-.medium-heading {
-  color: var(--light-slate);
-  font-size: 32px;
-  margin-top: 10px;
-}
-.hero-desc {
-  margin-top: 20px;
-  max-width: 500px;
-}
-.primary-btn {
-  margin-top: 20px;
-  display: inline-block;
-  padding: 12px 22px;
-  color: var(--green);
-  border: 1px solid var(--green);
-  border-radius: var(--radius);
-  text-decoration: none;
-}
+/* Portrait (slightly smaller) */
+.hero-portrait{display:flex;justify-content:center;align-items:center;flex:0 0 160px}
+.portrait{width:150px;height:150px;border-radius:50%;object-fit:cover;box-shadow:0 14px 30px rgba(2,12,27,0.55);border:3px solid rgba(255,255,255,0.04)}
 
-/* Portrait */
-.hero-portrait {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.portrait {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 18px 40px rgba(2,12,27,0.6);
-  border: 4px solid rgba(255,255,255,0.05);
-}
+/* MAIN / SECTIONS (reduced margins) */
+main{padding:36px 16px;max-width:860px;margin:12px auto 64px}
+.numbered-heading{color:var(--white);margin-bottom:12px;font-size:22px}
 
-/* Sections */
-main {
-  padding: 80px 20px;
-  max-width: 900px;
-  margin: auto;
-}
-.numbered-heading {
-  color: var(--white);
-  margin-bottom: 20px;
-  font-size: 28px;
-}
+/* Fancy list (same but compact) */
+.fancy-list{list-style:none;padding-left:0;margin:0}
+.fancy-list li{position:relative;padding-left:18px;margin-bottom:8px;color:var(--slate)}
+.fancy-list li::before{content:"▹";position:absolute;left:0;color:var(--green);top:0}
 
-/* Fancy list */
-.fancy-list {
-  list-style: none;
-  padding-left: 0;
+/* ACCORDION (tighter spacing) */
+.accordion{margin-top:12px}
+.acc-item{margin-bottom:10px}
+.acc-btn{
+  width:100%;
+  background:var(--light-navy);
+  padding:12px 14px;    /* tightened */
+  border:none;
+  cursor:pointer;
+  color:var(--white);
+  text-align:left;
+  border-radius:8px;
+  font-size:15px;
 }
-.fancy-list li {
-  position: relative;
-  padding-left: 20px;
-  margin-bottom: 10px;
+.acc-btn.active{background:rgba(100,255,218,0.10);border-left:3px solid var(--green)}
+.acc-meta{display:block;color:var(--slate);font-size:12px;margin-top:6px}
+.acc-content{
+  max-height:0;
+  overflow:hidden;
+  background:var(--light-navy);
+  border-radius:0 0 8px 8px;
+  transition:max-height .28s ease,padding .28s ease;
+  padding:0 14px;
 }
-.fancy-list li::before {
-  content: "▹";
-  position: absolute;
-  left: 0;
-  color: var(--green);
-}
+.acc-content .fancy-list{padding:10px 0 12px}
 
-/* Accordion */
-.accordion {
-  margin-top: 20px;
-}
-.acc-item {
-  margin-bottom: 12px;
-}
-.acc-btn {
-  width: 100%;
-  background: var(--light-navy);
-  padding: 16px;
-  border: none;
-  cursor: pointer;
-  color: var(--white);
-  text-align: left;
-  border-radius: 8px;
-  font-size: 16px;
-}
-.acc-btn.active {
-  background: rgba(100,255,218,0.12);
-  border-left: 3px solid var(--green);
-}
-.acc-meta {
-  display: block;
-  color: var(--slate);
-  font-size: 13px;
-  margin-top: 5px;
-}
-.acc-content {
-  max-height: 0;
-  overflow: hidden;
-  background: var(--light-navy);
-  border-radius: 0 0 8px 8px;
-  transition: max-height 0.3s ease;
-  padding: 0 16px;
-}
-
-/* Project cards */
-.project-card {
-  background: var(--light-navy);
-  padding: 14px;
-  border-radius: 6px;
-  margin-bottom: 12px;
-  color: var(--white);
-}
+/* Projects & cards */
+.project-card{background:var(--light-navy);padding:10px;border-radius:6px;margin-bottom:10px;color:var(--white)}
 
 /* Footer */
-.footer {
-  text-align: center;
-  padding: 20px;
-  color: var(--slate);
-}
+.footer{text-align:center;padding:14px;color:var(--slate)}
 
-/* Responsive */
-@media (max-width: 900px) {
-  .left-rail { display: none; }
-  .hero-inner { flex-direction: column-reverse; text-align: center; }
-  .portrait { width: 160px; height: 160px; }
-  .big-heading { font-size: 40px; }
+/* RESPONSIVE (tighter mobile) */
+@media (max-width:900px){
+  .left-rail{display:none}
+  .hero{padding:80px 18px}
+  .hero-inner{flex-direction:column-reverse;gap:18px}
+  .portrait{width:120px;height:120px}
+  .big-heading{font-size:32px}
+  main{padding:20px}
 }
