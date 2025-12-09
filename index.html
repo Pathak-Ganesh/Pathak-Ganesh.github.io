@@ -1,42 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ganesh Mahendra Pathak</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <meta name="theme-color" content="#081425">
 </head>
-
 <body>
 
   <!-- LEFT RAIL -->
-  <aside class="left-rail">
+  <aside class="left-rail" aria-hidden="false">
     <div class="rail-name">GANESH</div>
 
-    <nav class="rail-links">
+    <nav class="rail-links" aria-label="Quick links">
       <a href="#about">ABOUT</a>
       <a href="#skills">SKILLS</a>
       <a href="#experience">EXPERIENCE</a>
       <a href="#projects">PROJECTS</a>
+      <a href="#education">EDUCATION</a>
       <a href="#contact">CONTACT</a>
     </nav>
 
+    <!-- Social icons (inline SVG) -->
     <div class="rail-social">
-      <a href="https://github.com/Pathak-Ganesh" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/ganeshpathak77" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Pathak-Ganesh" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.2 1.87.86 2.33.66.07-.52.28-.86.51-1.06-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.02.08-2.12 0 0 .67-.22 2.2.82A7.63 7.63 0 018 4.6c.68.003 1.36.092 2 .27 1.52-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      </a>
+      <a href="https://linkedin.com/in/ganeshpathak77" target="_blank" rel="noopener" class="icon-link" aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zM9 8h3.8v2.2h.1c.5-.9 1.7-2 3.5-2 3.7 0 4.4 2.4 4.4 5.6V24h-4v-7.2c0-1.7 0-3.9-2.4-3.9-2.4 0-2.8 1.8-2.8 3.7V24H9V8z"/></svg>
+      </a>
     </div>
   </aside>
 
   <!-- TOP NAV -->
-  <nav class="top-nav">
+  <nav class="top-nav" aria-label="Top navigation">
     <div class="nav-inner">
       <div class="logo">GMP</div>
-      <div class="nav-links-main">
+      <div class="nav-links-main" role="navigation">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
@@ -47,125 +54,116 @@
   </nav>
 
   <!-- HERO -->
-  <header class="hero">
+  <header class="hero" role="banner">
     <div class="hero-inner">
-
-      <!-- Left side text -->
       <div class="hero-text">
         <h1 class="big-heading">Hi, I'm Ganesh.</h1>
-        <h2 class="medium-heading">Business Analyst & CRM Specialist.</h2>
-
+        <h2 class="medium-heading">Business Analyst & CRM Specialist</h2>
         <p class="hero-desc">
-          I design CRM workflows, author BRDs/FSDs, define user stories, and lead SIT/UAT execution.
+          Strategic Business Analyst delivering CRM implementations, workflow automation, BRDs/FSDs, user stories,
+          and SIT/UAT coordination. Experienced with Power BI, SQL, JIRA, Confluence and Agile delivery.
         </p>
-
-        <a class="primary-btn" href="resume.pdf" target="_blank">Download Resume</a>
+        <a class="primary-btn" href="resume.pdf" target="_blank" rel="noopener">Download Resume</a>
       </div>
 
-      <!-- Portrait right side -->
-      <div class="hero-portrait">
+      <div class="hero-portrait" aria-hidden="false">
         <img src="photo.png" alt="Ganesh Mahendra Pathak" class="portrait">
       </div>
-
     </div>
   </header>
 
-  <main id="content">
+  <main id="content" role="main">
 
     <!-- ABOUT -->
-    <section id="about">
+    <section id="about" class="section fade-reveal">
       <h2 class="numbered-heading">About Me</h2>
       <p>
-        I specialize in CRM implementation, process mapping, workflow automation, UAT/SIT coordination,
-        and business documentation such as BRDs, FSDs, and user stories. I also work with SQL, Power BI,
-        and Agile delivery.
+        Strategic Business Analyst with experience in Retail and BFSI domains. Skilled in requirements elicitation,
+        backlog management, user-story creation, Agile/Scrum facilitation, and stakeholder workshops. Proficient in
+        preparing BRDs/FSDs and supporting SIT/UAT while delivering data-driven business outcomes.
       </p>
     </section>
 
     <!-- SKILLS -->
-    <section id="skills">
+    <section id="skills" class="section fade-reveal">
       <h2 class="numbered-heading">Skills</h2>
       <ul class="fancy-list">
-        <li>BRD · FSD · User Stories · Acceptance Criteria</li>
-        <li>Process Mapping & CRM Workflow Design</li>
-        <li>SIT / UAT Planning & Execution</li>
-        <li>Power BI · SQL · Jira · Confluence</li>
+        <li>Requirements elicitation · BRD / FSD · User stories & acceptance criteria</li>
+        <li>SIT / UAT planning & execution · Test-scenario design · Defect tracking</li>
+        <li>Process mapping & CRM workflow design · Automation & change management</li>
+        <li>Power BI · SQL · Tableau · Jira · Confluence · UML · Visio</li>
       </ul>
     </section>
 
     <!-- EXPERIENCE (Accordion) -->
-    <section id="experience">
+    <section id="experience" class="section fade-reveal">
       <h2 class="numbered-heading">Experience</h2>
 
-      <div class="accordion">
+      <div class="accordion" role="list">
 
-        <!-- 1 -->
-        <div class="acc-item">
-          <button class="acc-btn">
+        <div class="acc-item" role="listitem">
+          <button class="acc-btn" aria-expanded="false">
             Program Coordinator – CRM Solutions
             <span class="acc-meta">Dr. D. Y. Patil Unitech Society · Oct 2024 – Present</span>
           </button>
-          <div class="acc-content">
+          <div class="acc-content" aria-hidden="true">
             <ul class="fancy-list">
-              <li>Leading CRM implementation and workflow documentation.</li>
-              <li>Preparing BRDs, FSDs, and user stories.</li>
-              <li>Supporting SIT/UAT and coordinating with stakeholders.</li>
+              <li>Lead CRM implementation: requirements elicitation, workflow design, BRDs/FSDs and user stories.</li>
+              <li>Coordinate with development & QA; validate releases through SIT & UAT.</li>
+              <li>Define automation rules, data models and reporting frameworks to optimise CRM processes.</li>
+              <li>Manage change requests, prioritise enhancements and track adoption metrics.</li>
             </ul>
           </div>
         </div>
 
-        <!-- 2 -->
-        <div class="acc-item">
-          <button class="acc-btn">
+        <div class="acc-item" role="listitem">
+          <button class="acc-btn" aria-expanded="false">
             Consultant – CRM (BFSI)
-            <span class="acc-meta">Acidaes Solutions · Apr 2024 – Sep 2024</span>
+            <span class="acc-meta">Acidaes Solution Pvt. Ltd · Apr 2024 – Sep 2024</span>
           </button>
-          <div class="acc-content">
+          <div class="acc-content" aria-hidden="true">
             <ul class="fancy-list">
-              <li>Converted business needs into functional specifications.</li>
-              <li>Created user stories, test cases, and coordinated UAT.</li>
+              <li>Captured business requirements and translated them into technical specifications and user stories.</li>
+              <li>Facilitated backlog grooming and supported UAT execution and sign-offs.</li>
             </ul>
           </div>
         </div>
 
-        <!-- 3 -->
-        <div class="acc-item">
-          <button class="acc-btn">
+        <div class="acc-item" role="listitem">
+          <button class="acc-btn" aria-expanded="false">
             Business Analyst
-            <span class="acc-meta">Aarav Global · Jan 2024 – Mar 2024</span>
+            <span class="acc-meta">Aarav Global Products & Services Pvt. Ltd · Jan 2024 – Mar 2024</span>
           </button>
-          <div class="acc-content">
+          <div class="acc-content" aria-hidden="true">
             <ul class="fancy-list">
-              <li>Owned backlog grooming and Agile documentation.</li>
-              <li>Facilitated requirement workshops and user validations.</li>
+              <li>Authored BRDs and user stories; owned backlog grooming and release preparation.</li>
+              <li>Facilitated discovery workshops to refine product scope and requirements.</li>
             </ul>
           </div>
         </div>
 
-        <!-- 4 -->
-        <div class="acc-item">
-          <button class="acc-btn">
-            Assistant Manager – BA & QA
+        <div class="acc-item" role="listitem">
+          <button class="acc-btn" aria-expanded="false">
+            Assistant Manager – Business Analyst & QA
             <span class="acc-meta">Reliance Jio Platforms Ltd · Dec 2021 – Dec 2023</span>
           </button>
-          <div class="acc-content">
+          <div class="acc-content" aria-hidden="true">
             <ul class="fancy-list">
-              <li>Led SIT/UAT execution and defect management.</li>
-              <li>Performed release validation and workflow testing.</li>
+              <li>Led SIT & UAT planning and execution; designed test scenarios and coordinated defect triage.</li>
+              <li>Performed release validation, A/B testing and stakeholder sign-offs.</li>
             </ul>
           </div>
         </div>
 
-        <!-- 5 -->
-        <div class="acc-item">
-          <button class="acc-btn">
+        <div class="acc-item" role="listitem">
+          <button class="acc-btn" aria-expanded="false">
             Business Analyst
             <span class="acc-meta">Arron Services · Aug 2017 – Nov 2020</span>
           </button>
-          <div class="acc-content">
+          <div class="acc-content" aria-hidden="true">
             <ul class="fancy-list">
-              <li>Built analytical dashboards in Power BI.</li>
-              <li>Supported requirement analysis and client discussions.</li>
+              <li>Built Power BI dashboards for operational reporting and analytics.</li>
+              <li>Prepared workflow diagrams, use cases and supported development and testing teams.</li>
             </ul>
           </div>
         </div>
@@ -174,63 +172,89 @@
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects">
+    <section id="projects" class="section fade-reveal">
       <h2 class="numbered-heading">Projects</h2>
-      <div class="project-card">CRM Implementation Automation</div>
-      <div class="project-card">Power BI KPI Dashboard Suite</div>
+      <div class="project-card">CRM Implementation Automation — workflow, rules engine, role-based routing</div>
+      <div class="project-card">Power BI KPI Dashboard Suite — automated monthly reporting & alerts</div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section fade-reveal">
+      <h2 class="numbered-heading">Education</h2>
+      <ul class="fancy-list">
+        <li>MBA — Ashoka Business School (University of Pune)</li>
+        <li>BCA — Ashoka Center for Business & Computer Studies (University of Pune)</li>
+      </ul>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact">
+    <section id="contact" class="section fade-reveal">
       <h2 class="numbered-heading">Contact</h2>
       <p>Email: <a href="mailto:Pathakganesh09@gmail.com">Pathakganesh09@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/Pathak-Ganesh" target="_blank" rel="noopener">Pathak-Ganesh</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/ganeshpathak77/" target="_blank" rel="noopener">/ganeshpathak77</a></p>
     </section>
 
   </main>
 
   <footer class="footer">© Ganesh Mahendra Pathak</footer>
 
-  <!-- Accordion Script -->
+  <!-- Accordion + accessibility + icon toggle -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const buttons = document.querySelectorAll(".acc-btn");
+      const buttons = Array.from(document.querySelectorAll('.acc-btn'));
+      if (!buttons.length) return;
 
-      function closeOthers(activeBtn) {
-        buttons.forEach(btn => {
-          if (btn !== activeBtn) {
-            btn.classList.remove("active");
-            btn.nextElementSibling.style.maxHeight = null;
+      function closeAll(except) {
+        buttons.forEach(b => {
+          if (b !== except) {
+            b.classList.remove('active');
+            b.setAttribute('aria-expanded', 'false');
+            const c = b.nextElementSibling;
+            if (c) { c.style.maxHeight = null; c.classList.remove('open'); c.setAttribute('aria-hidden','true'); }
           }
         });
       }
 
-      buttons.forEach((btn, index) => {
-        btn.addEventListener("click", () => {
+      buttons.forEach((btn, idx) => {
+        btn.setAttribute('aria-expanded', 'false');
+        btn.addEventListener('click', () => {
+          const open = btn.classList.contains('active');
           const content = btn.nextElementSibling;
-          const open = btn.classList.contains("active");
-
-          closeOthers(btn);
-
           if (!open) {
-            btn.classList.add("active");
-            content.style.maxHeight = content.scrollHeight + "px";
+            closeAll(btn);
+            btn.classList.add('active');
+            btn.setAttribute('aria-expanded', 'true');
+            if (content) { content.style.maxHeight = content.scrollHeight + 'px'; content.classList.add('open'); content.setAttribute('aria-hidden','false'); }
           } else {
-            btn.classList.remove("active");
-            content.style.maxHeight = null;
+            btn.classList.remove('active');
+            btn.setAttribute('aria-expanded', 'false');
+            if (content) { content.style.maxHeight = null; content.classList.remove('open'); content.setAttribute('aria-hidden','true'); }
           }
+        });
+
+        // keyboard support
+        btn.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); }
+          if (e.key === 'ArrowDown') { e.preventDefault(); buttons[Math.min(buttons.length-1, idx+1)].focus(); }
+          if (e.key === 'ArrowUp') { e.preventDefault(); buttons[Math.max(0, idx-1)].focus(); }
         });
       });
 
-      // OPEN FIRST ACCORDION BY DEFAULT
+      // open first by default
       const first = buttons[0];
       if (first) {
-        const content = first.nextElementSibling;
-        first.classList.add("active");
-        content.style.maxHeight = content.scrollHeight + "px";
+        const c = first.nextElementSibling;
+        first.classList.add('active');
+        first.setAttribute('aria-expanded','true');
+        if (c) { c.style.maxHeight = c.scrollHeight + 'px'; c.classList.add('open'); c.setAttribute('aria-hidden','false'); }
       }
+
+      // reveal animations
+      const reveals = document.querySelectorAll('.fade-reveal');
+      setTimeout(() => reveals.forEach(r => r.classList.add('revealed')), 120);
     });
   </script>
 
 </body>
 </html>
-
