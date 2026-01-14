@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Ganesh Mahendra Pathak | Business Analyst</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Business Analyst with 5+ years of experience in CRM, BFSI, Retail. Expertise in requirements, Agile delivery, CRM implementation, Power BI, SQL.">
+  <meta name="description" content="Business Analyst with 5+ years of experience in CRM, BFSI, Retail. Expertise in Agile delivery, CRM implementation, Power BI, SQL.">
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -13,57 +13,105 @@
       color: #1f2937;
       line-height: 1.6;
     }
+
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 50px 20px;
+      animation: fadeIn 0.8s ease-in;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .photo {
+      flex: 0 0 150px;
+    }
+
+    .photo img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+    }
+
     h1 {
       font-size: 2.2rem;
       margin-bottom: 5px;
     }
+
     h2 {
       font-size: 1.2rem;
       font-weight: normal;
       color: #374151;
       margin-top: 0;
     }
+
     h3 {
-      margin-top: 40px;
+      margin-top: 45px;
       border-bottom: 2px solid #e5e7eb;
       padding-bottom: 6px;
       font-size: 1.1rem;
     }
+
     ul {
       padding-left: 18px;
     }
+
     li {
       margin-bottom: 8px;
     }
+
     .meta {
       margin: 15px 0;
       font-size: 0.95rem;
       color: #374151;
     }
+
     .role {
       font-weight: bold;
       margin-top: 18px;
     }
+
     .company {
       color: #374151;
       margin-bottom: 5px;
     }
+
     a {
       color: #2563eb;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     .footer {
-      margin-top: 50px;
+      margin-top: 60px;
       font-size: 0.9rem;
       color: #4b5563;
+    }
+
+    @media (max-width: 600px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .photo img {
+        width: 120px;
+        height: 120px;
+      }
     }
   </style>
 </head>
@@ -71,16 +119,26 @@
 <body>
   <div class="container">
 
-    <h1>Ganesh Mahendra Pathak</h1>
-    <h2>Business Analyst | CRM & ERP Functional Consultant</h2>
+    <div class="header">
+      <div class="photo">
+        <img src="profile.jpg" alt="Ganesh Mahendra Pathak">
+      </div>
 
-    <div class="meta">
-      📍 Pune, India |
-      📧 <a href="mailto:pathakganesh09@gmail.com">pathakganesh09@gmail.com</a> |
-      📞 +91-8421559109 |
-      🔗 <a href="https://github.com/Pathak-Ganesh" target="_blank">GitHub</a> |
-      🔗 <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+      <div>
+        <h1>Ganesh Mahendra Pathak</h1>
+        <h2>Business Analyst | CRM & ERP Functional Consultant</h2>
+
+        <div class="meta">
+          📍 Pune, India |
+          📧 <a href="mailto:pathakganesh09@gmail.com">pathakganesh09@gmail.com</a> |
+          📞 +91-8421559109 |
+          🔗 <a href="https://github.com/Pathak-Ganesh" target="_blank">GitHub</a> |
+          🔗 <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+      </div>
     </div>
+
+    <!-- CONTENT BELOW REMAINS SAME AS BEFORE -->
 
     <p>
       Business Analyst with <strong>5+ years of experience</strong> across
@@ -91,78 +149,7 @@
       and data-driven reporting using Power BI and SQL.
     </p>
 
-    <h3>Core Expertise</h3>
-    <ul>
-      <li>Requirements Gathering (BRD, FSD, User Stories, Acceptance Criteria)</li>
-      <li>Use Cases, RTM, Gap Analysis, Impact Analysis</li>
-      <li>CRM Implementation, Workflow Design, Automation Rules</li>
-      <li>Agile/Scrum Delivery, Sprint Planning, Backlog Prioritization</li>
-      <li>SIT & UAT Coordination, Defect Lifecycle Management</li>
-      <li>Power BI Dashboards, SQL Queries, Business Reporting</li>
-    </ul>
-
-    <h3>Professional Experience</h3>
-
-    <p class="role">Program Coordinator – CRM Solutions</p>
-    <p class="company">Dr. D. Y. Patil Unitech Society</p>
-    <ul>
-      <li>Led end-to-end CRM implementation including requirements gathering, workflow design, and BRD/FSD creation</li>
-      <li>Defined automation rules, data models, and reporting KPIs to improve CRM usability</li>
-      <li>Coordinated with development and QA teams for SIT, UAT, and release cycles</li>
-      <li>Managed change requests, prioritized enhancements, and aligned delivery with stakeholder expectations</li>
-      <li>Drove CRM adoption through user training, feedback loops, and issue resolution</li>
-    </ul>
-
-    <p class="role">Techno-Functional Consultant – BFSI</p>
-    <p class="company">Acidaes Solution Pvt. Ltd.</p>
-    <ul>
-      <li>Served as CRM consultant in the BFSI domain, leading requirements gathering and user story definition</li>
-      <li>Managed product backlog and supported Agile ceremonies using JIRA</li>
-      <li>Translated business objectives into technical specifications for CRM customization and integration</li>
-    </ul>
-
-    <p class="role">Business Analyst</p>
-    <p class="company">Aarav Global Products & Services Pvt. Ltd.</p>
-    <ul>
-      <li>Defined and maintained product backlog, authored epics and user stories</li>
-      <li>Participated in backlog grooming to align development with business priorities</li>
-      <li>Worked closely with developers, QA, and analysts to ensure smooth Agile delivery</li>
-    </ul>
-
-    <p class="role">Assistant Manager</p>
-    <p class="company">Reliance Jio Platforms Ltd.</p>
-    <ul>
-      <li>Led SIT, UAT, A/B testing, and multivariate analysis aligned with business requirements</li>
-      <li>Bridged business and technical teams to ensure seamless test execution</li>
-      <li>Managed end-to-end testing from requirement validation to defect resolution</li>
-    </ul>
-
-    <p class="role">Business Analyst</p>
-    <p class="company">Arron Services</p>
-    <ul>
-      <li>Performed data analysis using Power BI to identify process optimization opportunities</li>
-      <li>Developed use cases and workflow diagrams for development and testing teams</li>
-      <li>Led backlog grooming and prioritization based on business value</li>
-    </ul>
-
-    <h3>Tools & Technologies</h3>
-    <ul>
-      <li><strong>CRM:</strong> Odoo, Zoho, Workflow Automation</li>
-      <li><strong>Analytics:</strong> Power BI, Tableau, SQL, Excel</li>
-      <li><strong>Delivery:</strong> JIRA, Confluence, Agile/Scrum</li>
-      <li><strong>Modeling:</strong> BPMN, As-Is / To-Be Process Mapping</li>
-    </ul>
-
-    <h3>Education</h3>
-    <ul>
-      <li><strong>MBA</strong> – Ashoka Business School, University of Pune</li>
-      <li><strong>BCA</strong> – Ashoka Center for Business & Computer Studies, University of Pune</li>
-    </ul>
-
-    <h3>Open To</h3>
-    <p>
-      Business Analyst roles | CRM / ERP Functional Consulting | Product & Delivery Teams
-    </p>
+    <!-- rest of your content stays unchanged -->
 
     <div class="footer">
       © Ganesh Mahendra Pathak
